@@ -8,7 +8,7 @@ const mapWidth = data[0].length-1;
 let currX = 0;
 let trees = 0;
 
-for (currY = moveY; currY < data.length; currY += moveY) {
+for (let currY = moveY; currY < data.length; currY += moveY) {
     // setting X
     currX = currX + moveX;
     if (currX >= mapWidth) {

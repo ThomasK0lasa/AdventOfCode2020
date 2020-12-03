@@ -21,7 +21,7 @@ console.log('Multiplication result: ' + multiply);
 function countTrees(moveX, moveY) {
     let currX = 0;
     let trees = 0;
-    for (currY = moveY; currY < data.length; currY += moveY) {
+    for (let currY = moveY; currY < data.length; currY += moveY) {
         // setting X
         currX = currX + moveX;
         if (currX >= mapWidth) {
