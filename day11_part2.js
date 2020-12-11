@@ -1,10 +1,7 @@
 const fs = require('fs');
 const fileName = "day11_input.txt";
 let data = fs.readFileSync(fileName, 'utf8').split('\r\n');
-
-data = data.map(row => {
-    return row.split("");
-})
+data = data.map(row => row.split(""));
 
 const oldSeats = [];
 const newSeats = [];
@@ -33,9 +30,6 @@ function copyData() {
 function shuffle(action) {
     for (let i = 0; i < oldSeats.length; i++) {
         for (let j = 0; j < oldSeats[i].length; j++) {
-            if (oldSeats[i][j] === ".") {
-                newSeats[i][j] = ".";
-            }
             if (action == "takingSeat") {
                 if (oldSeats[i][j] === "L") {
                     switchSeat(i, j, "L");

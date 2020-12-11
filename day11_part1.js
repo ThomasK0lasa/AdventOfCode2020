@@ -34,9 +34,6 @@ function copyData() {
 function shuffle(action) {
     for (let i = 0; i < oldSeats.length; i++) {
         for (let j = 0; j < oldSeats[i].length; j++) {
-            if (oldSeats[i][j] === ".") {
-                newSeats[i][j] = ".";
-            } 
             if (action == "takingSeat") {
                 if (oldSeats[i][j] === "L") {
                     switchSeat(i, j, "L");
